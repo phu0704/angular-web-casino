@@ -1,0 +1,59 @@
+<section class="intro">
+  <div
+    class="intro__content"
+    id="intro-content"
+    [ngStyle]="{ height: statusShow ? 'auto' : '112px' }"
+  >
+    <p id="content-showmore">
+      {{ getContent() }}
+    </p>
+    <div
+      id="coating"
+      class="intro__coating"
+      [ngStyle]="{ display: statusShow ? 'none' : 'block' }"
+      [ngStyle]="{ display: checkContent() ? 'none' : 'block' }"
+    ></div>
+  </div>
+  <div
+    id="show-more"
+    (click)="showMore()"
+    [ngClass]="statusShow ? 'intro__show-more appear' : 'intro__show-more'"
+    [ngStyle]="{ display: checkContent() ? 'none' : 'flex' }"
+  >
+    <p id="show-more-content">{{ statusShow ? 'Show less' : 'Show more' }}</p>
+    <img
+      id="img-showmore"
+      [ngStyle]="{ transform: statusShow ? 'rotate(180deg)' : 'rotate(0deg)' }"
+      src="../assets/img/intro/showMore.png"
+      alt=""
+    />
+  </div>
+  <div class="intro__active">
+    <p>Active filters: Casino Accepts Players from:</p>
+    <div class="intro__active--option">
+      <p>Canada</p>
+      <img src="../assets/img/intro/x.png" alt="" />
+    </div>
+    <p class="intro__active--casino">Casino Games:</p>
+    <div class="intro__active--option">
+      <p>Slots</p>
+      <img src="../assets/img/intro/x.png" alt="" />
+    </div>
+    <div class="intro__active--reset"><p>Reset fIlters</p></div>
+    <div class="intro__active--setting">
+      <div class="setting__bg"></div>
+      <img src="../assets/img/intro/setting.png" alt="" />
+      <p>Filter (2)</p>
+    </div>
+  </div>
+  <div class="intro__showing" id="intro__showing">
+    <p>
+      Showing casinos: Accepting players from Greece with Reputation rating
+      above 7.5
+    </p>
+    <div class="intro__showing--sort">
+      <strong>Sort</strong>
+      <p>: Recommended</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,91 @@
+<header class="header">
+  <div class="container">
+    <div class="header__container">
+      <div class="header__bg"></div>
+      <div class="header__path">
+        <img
+          class="header__path--open"
+          (click)="openSlidebar()"
+          src="../assets/img/header/openslidebar.png"
+          alt=""
+        />
+        <div class="header__path--url">
+          <p>PlayUnited.com</p>
+          <p>></p>
+          <p>Casinos</p>
+        </div>
+        <div class="header__logo--mobile">
+          <img src="../assets/img/header/logo-mobile.png" alt="" />
+        </div>
+        <div class="header__logo--tablet">
+          <img src="../assets/img/header/logo-tablet.png" alt="" />
+        </div>
+      </div>
+      <div class="header__recommend">
+        <p>Recommend for you:</p>
+        <p class="header__recommend--casinos">573 casinos</p>
+      </div>
+      <div class="header__tab">
+        <button
+          id="btn-recommended"
+          [ngClass]="
+            getStatus('Recommended')
+              ? 'header__tab--recommended selected'
+              : 'header__tab--recommended'
+          "
+          name="Recommended"
+          (click)="selectBtn($event)"
+        >
+          Recommended (342)
+        </button>
+        <button
+          id="btn-brands"
+          [ngClass]="
+            getStatus('Big Brands')
+              ? 'header__tab--brands selected'
+              : 'header__tab--brands'
+          "
+          name="Big Brands"
+          (click)="selectBtn($event)"
+        >
+          Big Brands (132)
+        </button>
+        <button
+          id="btn-newly"
+          name="Newly Opened"
+          [ngClass]="
+            getStatus('Newly Opened')
+              ? 'header__tab--newly selected'
+              : 'header__tab--newly'
+          "
+          (click)="selectBtn($event)"
+        >
+          Newly Opnened (193)
+        </button>
+        <button
+          id="btn-all"
+          name="All"
+          [ngClass]="
+            getStatus('All') ? 'header__tab--all selected' : 'header__tab--all'
+          "
+          (click)="selectBtn($event)"
+        >
+          All (1982)
+        </button>
+      </div>
+      <div class="header__crossbar"></div>
+      <div class="header__language">
+        <img
+          class="header__language--icon"
+          src="../assets/img/header/flag-english.png"
+          alt=""
+        />
+        <select name="language" class="header__language--select">
+          <option value="english">EN</option>
+          <option value="vietnam">VN</option>
+        </select>
+        <img class="search" src="../assets/img/header/seach.png" alt="" />
+      </div>
+    </div>
+  </div>
+</header>

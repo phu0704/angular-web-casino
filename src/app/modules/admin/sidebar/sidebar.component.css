@@ -1,0 +1,136 @@
+* {
+  transition: all 0.3s linear, hover 0s, transform 0.1s;
+}
+
+.sidebar {
+  width: 282px;
+  background: #0c1245;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s linear, opacity 0.05s linear;
+  height: 100vh;
+  position: sticky;
+}
+.sidebar__logo {
+  width: 282px;
+  height: 194px;
+  margin-left: -16px;
+  background: linear-gradient(180deg, #193387 0%, #0b1144 100%);
+}
+.sidebar__logo img {
+  margin-top: 24px;
+  margin-left: 48px;
+  width: 184px;
+  height: 122px;
+}
+.sidebar__crossbar {
+  width: 250px;
+  height: 6px;
+  margin: 0 auto;
+  background: rgba(12, 18, 69, 0.01);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+}
+.sidebar__casinos .sidebar__select, .sidebar__bonuses .sidebar__select, .sidebar__games .sidebar__select, .sidebar__blog .sidebar__select {
+  height: 56px;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: white;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+}
+.sidebar__casinos .sidebar__select .img-logo, .sidebar__bonuses .sidebar__select .img-logo, .sidebar__games .sidebar__select .img-logo, .sidebar__blog .sidebar__select .img-logo {
+  padding-top: 16px;
+  width: 24px;
+  height: 24px;
+}
+.sidebar__casinos .sidebar__select p, .sidebar__bonuses .sidebar__select p, .sidebar__games .sidebar__select p, .sidebar__blog .sidebar__select p {
+  color: white;
+  position: absolute;
+  top: 17px;
+  left: 40px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.sidebar__casinos .sidebar__select .img-arrow, .sidebar__bonuses .sidebar__select .img-arrow, .sidebar__games .sidebar__select .img-arrow, .sidebar__blog .sidebar__select .img-arrow {
+  position: absolute;
+  top: 25px;
+  width: 16px;
+  right: 6px;
+  cursor: pointer;
+}
+.sidebar__casinos .intro__active--option, .sidebar__bonuses .intro__active--option, .sidebar__games .intro__active--option, .sidebar__blog .intro__active--option {
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+@media (max-width: 769px) and (min-width: 377px) {
+  .sidebar {
+    z-index: 2;
+    width: 40vw;
+    height: 100vh;
+    overflow-x: scroll;
+    position: fixed;
+  }
+  .sidebar__logo {
+    width: 40vw;
+    margin: 0 0 0 -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar__logo img {
+    margin: 0;
+    width: 30vw;
+  }
+  .coating {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 60vw;
+    background-color: black;
+    z-index: 3;
+    opacity: 0.3;
+  }
+}
+@media (max-width: 376px) {
+  .sidebar {
+    z-index: 2;
+    width: 60vw;
+    height: 100vh;
+    overflow-x: scroll;
+    position: fixed;
+  }
+  .sidebar__logo {
+    width: 60vw;
+    margin: 0 0 0 -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar__logo img {
+    margin: 0;
+    width: 40vw;
+  }
+  .coating {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 40vw;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.3;
+  }
+}
+
+/*# sourceMappingURL=sidebar.component.css.map */

@@ -1,0 +1,252 @@
+<section class="bookie" id="bookie">
+  <div class="container">
+    <div class="bookie__container">
+      <div
+        *ngFor="
+          let bookie of bookieList
+            | paginate
+              : { itemsPerPage: getItemsPerPage(), currentPage: getP() }
+        "
+        class="bookie__box bookie__dunder"
+      >
+        <div class="box__left" [ngStyle]="{ 'background-color': bookie.color }">
+          <img src="{{ bookie.logo }}" alt="" />
+        </div>
+        <div class="box__right">
+          <div class="box__right--header">
+            <div class="title">
+              <p class="title__stt">#{{ bookie.id }}</p>
+              <p class="title__name">- {{ bookie.name }}</p>
+            </div>
+            <div class="infor">
+              <div *ngIf="bookie.Featured" class="infor__featured">
+                <img src="../assets/img/bookie/rating-star-ribbon.png" alt="" />
+                <p>Featured</p>
+              </div>
+              <div class="infor__ribbon">
+                <img src="../assets/img/bookie/ribbon.png" alt="" />
+                <p>{{ bookie.Evaluate }}/10</p>
+              </div>
+              <div class="infor__perfect">
+                <p class="title" *ngIf="bookie.PERFECT">PERFECT</p>
+                <p *ngIf="bookie.Reputation">Reputation</p>
+              </div>
+              <div class="infor__icon-i">
+                <img src="../assets/img/bookie/i.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="box__right--body">
+            <div class="container">
+              <div class="box__container">
+                <div class="box__title">
+                  <div class="box__item">
+                    <img
+                      *ngIf="bookie.criteria.playersFrom; else elsePlayerForm"
+                      src="../assets/img/bookie/V.png"
+                      alt=""
+                    />
+                    <ng-template #elsePlayerForm>
+                      <img
+                        src="../assets/img/bookie/X.png"
+                        class="img-x"
+                        alt=""
+                      />
+                    </ng-template>
+                    <img src="../assets/img/flag/flag-vn.png" alt="flag" />
+                    <p>Players from Greece</p>
+                  </div>
+                  <div class="box__item">
+                    <img
+                      *ngIf="bookie.criteria.englishWeb; else elseEnglishWeb"
+                      src="../assets/img/bookie/V.png"
+                      alt=""
+                    />
+                    <ng-template #elseEnglishWeb>
+                      <img
+                        src="../assets/img/bookie/X.png"
+                        class="img-x"
+                        alt=""
+                      />
+                    </ng-template>
+                    <img src="../assets/img/flag/flag-en.png" alt="flag" />
+                    <p>English website</p>
+                  </div>
+                  <div class="box__item">
+                    <img
+                      *ngIf="
+                        bookie.criteria.englishSupport;
+                        else elseEnglishSupport
+                      "
+                      src="../assets/img/bookie/V.png"
+                      alt=""
+                    />
+                    <ng-template #elseEnglishSupport>
+                      <img
+                        src="../assets/img/bookie/X.png"
+                        class="img-x"
+                        alt=""
+                      />
+                    </ng-template>
+                    <img src="../assets/img/flag/flag-en.png" alt="flag" />
+                    <p>English customer support</p>
+                  </div>
+                  <div class="box__item">
+                    <img
+                      *ngIf="bookie.criteria.liveChat; else elseLiveChat"
+                      src="../assets/img/bookie/V.png"
+                      alt=""
+                    />
+                    <ng-template #elseLiveChat>
+                      <img
+                        src="../assets/img/bookie/X.png"
+                        class="img-x"
+                        alt=""
+                      />
+                    </ng-template>
+                    <img
+                      class="title__item--chat"
+                      src="../assets/img/bookie/chat.png"
+                      alt="flag"
+                    />
+                    <p>Live chat</p>
+                  </div>
+                </div>
+                <div class="box__infor">
+                  <ul>
+                    <li>{{ bookie.criteria.providers }} Game Providers</li>
+                    <li>{{ bookie.criteria.paymentMethod }} Payment Methods</li>
+                    <li>{{ bookie.criteria.gameLicense }} Gaming License</li>
+                    <li *ngIf="bookie.criteria.vpn; else elseVpn">
+                      VPN Allowe
+                    </li>
+                    <ng-template #elseVpn>
+                      <li>VPN Not Allowe</li>
+                    </ng-template>
+                  </ul>
+                </div>
+                <div
+                  class="box__gift"
+                  [ngStyle]="{
+                    border:
+                      bookie.id == 1 ? '5px solid #e8317e' : '5px solid #F6BF31'
+                  }"
+                >
+                  <div
+                    class="box__gift--circle"
+                    [ngStyle]="{
+                      background: bookie.id == 1 ? '#e8317e' : '#F6BF31'
+                    }"
+                  >
+                    <img src="../assets/img/bookie/gift-box.png" alt="" />
+                  </div>
+                  <div
+                    class="box__gift--rectangle"
+                    [ngStyle]="{
+                      background: bookie.id == 1 ? '#e8317e' : '#F6BF31'
+                    }"
+                  >
+                    Exclusive
+                  </div>
+                  <div
+                    class="box__gift--content"
+                    [ngStyle]="{ color: bookie.id == 1 ? '#e8317e' : 'black' }"
+                  >
+                    {{ bookie.exclusive }}
+                    <span class="gift-content-hidden"> on slot games</span>
+                  </div>
+                  <div class="box__gift--tvc">T&C's Apply</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box__right--footer">
+            <button
+              class="visitCasino"
+              id="visitCasino"
+              [routerLink]="['../bookie-template', bookie.id]"
+            >
+              Visit
+              <p>Casino</p>
+            </button>
+            <button class="review" id="review">
+              <p>Review</p>
+            </button>
+            <button
+              *ngIf="bookie.status; else lessDetails"
+              class="moreDetails"
+              (click)="openHiddenBox(bookie.name)"
+            >
+              <p>Less Details</p>
+              <img src="../assets/img/bookie/upArrow.png" alt="" />
+            </button>
+            <ng-template #lessDetails>
+              <button class="moreDetails" (click)="openHiddenBox(bookie.name)">
+                <p>More Details</p>
+                <img
+                  src="../assets/img/bookie/upArrow.png"
+                  class="reverse"
+                  alt=""
+                />
+              </button>
+            </ng-template>
+          </div>
+          <div
+            class="box__right--hidden"
+            id="md-dunder-box"
+            [ngClass]="bookie.status ? '' : 'box-hidden'"
+          >
+            <div class="container">
+              <div class="box__item">
+                <img src="../assets/img/bookie/i-big.png" alt="" />
+                <p>Why play here?</p>
+                <ul>
+                  <li *ngFor="let i of bookie.whyPlay">{{ i }}</li>
+                </ul>
+              </div>
+              <div class="box__item">
+                <img src="../assets/img/bookie/gift-box-blue.png" alt="" />
+                <p>Bonus Details</p>
+                <ul>
+                  <li>
+                    Maximum First Deposit Bonus:
+                    <strong>up to {{ bookie.bonus.maxDeposit }}</strong>
+                  </li>
+                  <li>
+                    Bonus Match:
+                    <strong
+                      >{{ bookie.bonus.match }} match on first deposit</strong
+                    >
+                  </li>
+                  <li>
+                    Minimum Deposit Amount:
+                    <strong>{{ bookie.bonus.minDeposit }}</strong>
+                  </li>
+                  <li>
+                    Wager Requirement:
+                    <strong>{{ bookie.bonus.wagerReq }} Times</strong>
+                  </li>
+                  <li>
+                    Bonus Excluded in Wager Requirement:
+                    <strong
+                      *ngIf="bookie.bonus.excludeBonus; else elseExcludeBonus"
+                      >Yes</strong
+                    >
+                    <ng-template #elseExcludeBonus>
+                      <strong>No</strong>
+                    </ng-template>
+                  </li>
+                  <li>
+                    No Deposit Bonus:
+                    <strong>{{ bookie.bonus.noDeposit }} Free Spins</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-show18></app-show18>

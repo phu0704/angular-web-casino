@@ -1,0 +1,174 @@
+.show18 .container .show18__container {
+  padding: 40px 54px 0 54px;
+}
+.show18 .container .show18__container .show18__btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+.show18 .container .show18__container .show18__btn button {
+  width: 398px;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #1e60e1;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1e60e1;
+}
+.show18 .container .show18__container .show18__btn button:hover {
+  background-color: #1e60e1;
+  color: white;
+}
+.show18 .container .show18__container .show18__container--pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .pagination-container {
+  transition: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  width: 50%;
+  transition: all 0s !important;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  width: 50vw;
+  transition: all 0s !important;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination li.pagination-next :after {
+  color: red;
+  display: none !important;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination li.pagination-next :before {
+  display: none !important;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination li.pagination-previous :after {
+  color: red;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination li.pagination-previous :before {
+  display: none !important;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination .disabled {
+  display: none !important;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination a,
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination button {
+  background-color: white;
+  border-radius: 6px !important;
+  padding: 8px 13px !important;
+  margin: 0 !important;
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+}
+.show18 .container .show18__container .show18__container--pagination ::ng-deep .ngx-pagination .current {
+  border-radius: 6px !important;
+  padding: 8px 13px !important;
+  margin: 0 !important;
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination .pagination__btn {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444444;
+  margin-left: 8px;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination .pagination__btn1 {
+  margin: 0;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination .selected {
+  background-color: #1e60e1;
+  color: white;
+}
+.show18 .container .show18__container .show18__container--pagination .showResults {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #111111;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination-hidden {
+  display: none;
+}
+
+@media (max-width: 376px) {
+  .show18 .container .show18__container {
+    padding: 30px 0 0 0;
+  }
+  .show18 .container .show18__container .show18__btn button {
+    width: 351px;
+    height: 44px;
+  }
+  .show18 .container .show18__container .show18__container--pagination {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-container {
+    display: none;
+  }
+  .show18 .container .show18__container .show18__container--pagination .showResults {
+    font-size: 14px;
+    line-height: 17px;
+    width: 189px;
+    height: 17px;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden {
+    padding-top: 14px;
+    display: block;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container button {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 9.3px;
+    justify-content: center;
+    border-radius: 6px;
+    border: 0;
+    background-color: #1e60e1;
+    color: white;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container button img {
+    filter: brightness(1000%);
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container .un-hover {
+    background-color: #c3cfea;
+    color: #7085b5;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container .un-hover:hover {
+    background-color: #c3cfea;
+    color: #7085b5;
+    border: 0;
+  }
+}
+
+/*# sourceMappingURL=show18.component.css.map */

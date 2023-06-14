@@ -1,0 +1,48 @@
+<button type="button" class="btn btn-danger">Danger</button>
+<form [formGroup]="bookieForm" (ngSubmit)="onSubmit()">
+  <div class="form__header">
+    <h1>{{ 'Bookie Information' | uppercase }}</h1>
+    <h3>(Template Driven Form)</h3>
+    <br />
+    <button [routerLink]="['/bookie-reactive']">Change to ReactiveForm</button>
+    <br />
+  </div>
+  <main class="form__main">
+    <div class="row-control">
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username" />
+      </mat-form-field>
+      {{ checkValid('username') }}
+    </div>
+    <br />
+
+    <div class="row-control">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
+      {{ checkValid('password') }}
+    </div>
+  </main>
+  <div class="notify">
+    <!--    <p>{{ getNotify() }}</p>-->
+  </div>
+  <div class="row-control row-actions">
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!bookieForm.valid"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+<button (click)="toast()">Toast</button>

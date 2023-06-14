@@ -1,0 +1,158 @@
+@import '../../shared/global';
+* {
+  transition: all 0.3s linear, hover 0s, transform 0.1s;
+}
+.sidebar {
+  width: 282px;
+  //height: 100%;
+  background: #0c1245;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s linear, opacity 0.05s linear;
+  height: 100vh;
+  //overflow-x:scroll ;
+  position: sticky;
+
+  &__logo {
+    width: 282px;
+    height: 194px;
+    margin-left: -16px;
+    background: linear-gradient(180deg, #193387 0%, #0b1144 100%);
+    img {
+      margin-top: 24px;
+      margin-left: 48px;
+      width: 184px;
+      height: 122px;
+    }
+  }
+  &__crossbar {
+    width: 250px;
+    height: 6px;
+    margin: 0 auto;
+    background: rgba(12, 18, 69, 0.01);
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  }
+  &__casinos,
+  &__bonuses,
+  &__games,
+  &__blog {
+    .sidebar__select {
+      height: 56px;
+      position: relative;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 40px;
+      color: white;
+      box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+      .img-logo {
+        padding-top: 16px;
+        width: 24px;
+        height: 24px;
+      }
+      p {
+        color: white;
+        position: absolute;
+        top: 17px;
+        left: 40px;
+        margin: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .img-arrow {
+        position: absolute;
+        top: 25px;
+        width: 16px;
+        right: 6px;
+        cursor: pointer;
+      }
+    }
+    .intro__active--option {
+      padding-left: 40px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+    }
+  }
+  //&__casinos{
+  //  .intro__active--option {
+  //    height: 186px;
+  //  }
+  //}
+  //&__bonuses{
+  //  .intro__active--option {
+  //    height: 220px;
+  //  }
+  //}
+  //&__games{
+  //  .intro__active--option {
+  //    height: 260px;
+  //  }
+  //}
+}
+@media (max-width: $viewport-tablet) and (min-width: $viewport-m+1px) {
+  .sidebar {
+    z-index: 2;
+    width: 40vw;
+    height: 100vh;
+    overflow-x: scroll;
+    position: fixed;
+    &__logo {
+      width: 40vw;
+      margin: 0 0 0 -16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin: 0;
+        width: 30vw;
+      }
+    }
+  }
+  .coating {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 60vw;
+    background-color: black;
+    //height: 200vw;
+    z-index: 3;
+    opacity: 0.3;
+  }
+}
+@media (max-width: $viewport-m) {
+  .sidebar {
+    z-index: 2;
+    width: 60vw;
+    height: 100vh;
+    overflow-x: scroll;
+    position: fixed;
+    &__logo {
+      width: 60vw;
+      margin: 0 0 0 -16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin: 0;
+        width: 40vw;
+      }
+    }
+  }
+  .coating {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 40vw;
+    background-color: black;
+    //height: 200vw;
+    z-index: 2;
+    opacity: 0.3;
+  }
+}

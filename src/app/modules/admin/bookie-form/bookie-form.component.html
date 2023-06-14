@@ -1,0 +1,353 @@
+<form #bookieForm="ngForm" autocomplete="off">
+  <div class="form__header">
+    <h1>{{ 'Bookie Information' | uppercase }}</h1>
+    <!--    <h3>(Template Driven Form)</h3>-->
+    <!--    <button [routerLink]="['/bookie-reactive', id]">Change to ReactiveForm</button>-->
+  </div>
+  <main class="form__main">
+    <label>ID:</label>
+    <div class="form__main--id">{{ bookie.id }}</div>
+    <p></p>
+    <label for="status">Status:</label>
+    <input
+      type="checkbox"
+      id="status"
+      name="status"
+      [(ngModel)]="bookie.status"
+    />
+    <p></p>
+    <label for="logo">Logo URL:</label>
+    <input
+      type="text"
+      id="logo"
+      name="logo"
+      placeholder="start logo  ../assets/img/bookie/ and end with .png"
+      #logo="ngModel"
+      [(ngModel)]="bookie.logo"
+      [ngClass]="checkValid(logo) ? 'input-validation' : ''"
+      required
+      pattern="^\.\.\/assets\/img\/bookie\/.*\.png$"
+      minlength="3"
+      maxlength="100"
+    />
+    <div *ngIf="checkValid(logo); else logoValidation">
+      {{
+        checkError(logo, 'start logo  ../assets/img/bookie/ and end with .png')
+      }}
+    </div>
+    <ng-template #logoValidation>
+      <p class="required">start logo ../assets/img/bookie/ and end with .png</p>
+    </ng-template>
+
+    <label for="color">Color:</label>
+    <input
+      type="text"
+      id="color"
+      name="color"
+      #color="ngModel"
+      [(ngModel)]="bookie.color"
+      required
+      pattern="^#([0-9A-Fa-f]{3}){1,2}$|^rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$"
+      [ngClass]="checkValid(color) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(color); else colorValidation">
+      {{ checkError(color, 'color must be in hex or rgb') }}
+    </div>
+    <ng-template #colorValidation>
+      <p class="required">color must be in hex or rgb</p>
+    </ng-template>
+
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      #name="ngModel"
+      [(ngModel)]="bookie.name"
+      required
+      [ngClass]="checkValid(name) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(name); else nameValidation">
+      {{ checkError(name, '') }}
+    </div>
+    <ng-template #nameValidation>
+      <p class="required"></p>
+    </ng-template>
+
+    <label for="featured">Featured:</label>
+    <input
+      type="checkbox"
+      id="featured"
+      name="featured"
+      [(ngModel)]="bookie.Featured"
+    />
+    <p></p>
+    <label for="evaluate">Evaluate:</label>
+    <input
+      type="number"
+      id="evaluate"
+      name="evaluate"
+      #evaluate="ngModel"
+      [(ngModel)]="bookie.Evaluate"
+      required
+      pattern="^(10(\.0{1,2})?|\d(\.\d{1,3})?)$"
+      [ngClass]="checkValid(evaluate) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(evaluate); else evaluateValidation">
+      {{
+        checkError(evaluate, 'evaluate must be from 0-10 and up to 3 decimal')
+      }}
+    </div>
+    <ng-template #evaluateValidation>
+      <p class="required">evaluate must be from 0-10 and up to 3 decimal</p>
+    </ng-template>
+
+    <label for="perfect">Is Perfect:</label>
+    <input
+      type="checkbox"
+      id="perfect"
+      name="perfect"
+      [(ngModel)]="bookie.PERFECT"
+    />
+    <p></p>
+    <label for="reputation">Has Good Reputation:</label>
+    <input
+      type="checkbox"
+      id="reputation"
+      name="reputation"
+      [(ngModel)]="bookie.Reputation"
+    />
+    <p></p>
+    <label for="playersFrom">Players From:</label>
+    <input
+      type="checkbox"
+      id="playersFrom"
+      name="playersFrom"
+      [(ngModel)]="bookie.criteria.playersFrom"
+    />
+    <p></p>
+
+    <label for="englishWeb">English Website:</label>
+    <input
+      type="checkbox"
+      id="englishWeb"
+      name="englishWeb"
+      [(ngModel)]="bookie.criteria.englishWeb"
+    />
+    <p></p>
+    <label for="englishSupport">English Support:</label>
+    <input
+      type="checkbox"
+      id="englishSupport"
+      name="englishSupport"
+      [(ngModel)]="bookie.criteria.englishSupport"
+    />
+    <p></p>
+    <label for="liveChat">Live Chat:</label>
+    <input
+      type="checkbox"
+      id="liveChat"
+      name="liveChat"
+      [(ngModel)]="bookie.criteria.liveChat"
+    />
+    <p></p>
+    <label for="providers">Number of Providers:</label>
+    <input
+      type="number"
+      id="providers"
+      name="providers"
+      #providers="ngModel"
+      [(ngModel)]="bookie.criteria.providers"
+      required
+      [ngClass]="checkValid(providers) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(providers); else providersValidation">
+      {{ checkError(providers, '') }}
+    </div>
+    <ng-template #providersValidation>
+      <p class="required"></p>
+    </ng-template>
+
+    <label for="paymentMethod">Number of Payment Methods:</label>
+    <input
+      type="number"
+      id="paymentMethod"
+      name="paymentMethod"
+      #paymentMethod="ngModel"
+      [(ngModel)]="bookie.criteria.paymentMethod"
+      required
+      [ngClass]="checkValid(paymentMethod) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(paymentMethod); else paymentMethodValidation">
+      {{ checkError(paymentMethod, '') }}
+    </div>
+    <ng-template #paymentMethodValidation>
+      <p class="required"></p>
+    </ng-template>
+
+    <label for="gameLicense">Game License:</label>
+    <input
+      type="number"
+      id="gameLicense"
+      name="gameLicense"
+      #gameLicense="ngModel"
+      [(ngModel)]="bookie.criteria.gameLicense"
+      required
+      [ngClass]="checkValid(gameLicense) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(gameLicense); else gameLicenseValidation">
+      {{ checkError(gameLicense, '') }}
+    </div>
+    <ng-template #gameLicenseValidation>
+      <p class="required"></p>
+    </ng-template>
+
+    <label for="vpn">Support VPN:</label>
+    <input
+      type="checkbox"
+      id="vpn"
+      name="vpn"
+      [(ngModel)]="bookie.criteria.vpn"
+    />
+    <p></p>
+    <label for="exclusive">Exclusive Offer:</label>
+    <input
+      type="text"
+      id="exclusive"
+      name="exclusive"
+      #exclusive="ngModel"
+      [(ngModel)]="bookie.exclusive"
+      required
+      [ngClass]="checkValid(exclusive) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(exclusive); else exclusiveValidation">
+      l{{ checkError(exclusive, '') }}
+    </div>
+    <ng-template #exclusiveValidation>
+      <p class="required"></p>
+    </ng-template>
+
+    <label for="maxDeposit">Maximum Deposit Bonus:</label>
+    <input
+      type="text"
+      id="maxDeposit"
+      name="maxDeposit"
+      #maxDeposit="ngModel"
+      [(ngModel)]="bookie.bonus.maxDeposit"
+      required
+      pattern="^\$[0-9]{1,7}$"
+      [ngClass]="checkValid(maxDeposit) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(maxDeposit); else maxDepositValidation">
+      {{
+        checkError(maxDeposit, 'maxDeposit start by $ and from 0 to 1000000 ')
+      }}
+    </div>
+    <ng-template #maxDepositValidation>
+      <p class="required">maxDeposit start by $ and from 0 to 1000000</p>
+    </ng-template>
+
+    <label for="match">Match Bonus:</label>
+    <input
+      type="text"
+      id="match"
+      name="match"
+      #match="ngModel"
+      [(ngModel)]="bookie.bonus.match"
+      required
+      pattern="^[0-9]{1,7}\%$"
+      [ngClass]="checkValid(match) ? 'input-validation' : ''"
+    />
+    <div *ngIf="checkValid(match); else matchValidation">
+      {{ checkError(match, 'match starts from 0 to 1000000 and ends with %') }}
+    </div>
+    <ng-template #matchValidation>
+      <p class="required">match starts from 0 to 1000000 and ends with %</p>
+    </ng-template>
+
+    <label for="minDeposit">Minimum Deposit:</label>
+    <input
+      type="text"
+      id="minDeposit"
+      name="minDeposit"
+      #minDeposit="ngModel"
+      [(ngModel)]="bookie.bonus.minDeposit"
+      required
+      pattern="^\$[0-9]{1,7}$"
+      [ngClass]="checkValid(minDeposit) ? 'input-validation' : ''"
+    />
+    <ng-container>
+      <div *ngIf="checkValid(minDeposit); else minDepositValidation">
+        {{
+          checkError(minDeposit, 'minDeposit start by $ and from 0 to 1000000 ')
+        }}
+      </div>
+      <ng-template #minDepositValidation>
+        <p class="required">minDeposit start by $ and from 0 to 1000000</p>
+      </ng-template>
+    </ng-container>
+    <label for="wagerReq">Wager Requirements:</label>
+    <input
+      type="text"
+      id="wagerReq"
+      name="wagerReq"
+      #wagerReq="ngModel"
+      [(ngModel)]="bookie.bonus.wagerReq"
+      required
+      pattern="^(0|[1-9]\d{0,5}|1000000)$"
+      [ngClass]="checkValid(wagerReq) ? 'input-validation' : ''"
+    />
+    <ng-container>
+      <div *ngIf="checkValid(wagerReq); else wagerReqValidation">
+        {{ checkError(wagerReq, 'wagerReq from 0 to 1000000') }}
+      </div>
+      <ng-template #wagerReqValidation>
+        <p class="required">wagerReq from 0 to 1000000</p>
+      </ng-template>
+    </ng-container>
+    <label for="excludeBonus">Exclude Bonus:</label>
+    <input
+      type="checkbox"
+      id="excludeBonus"
+      name="excludeBonus"
+      [(ngModel)]="bookie.bonus.excludeBonus"
+    />
+    <p></p>
+    <label for="noDeposit">No Deposit Bonus:</label>
+    <input
+      type="text"
+      id="noDeposit"
+      name="noDeposit"
+      #noDeposit="ngModel"
+      [(ngModel)]="bookie.bonus.noDeposit"
+      required
+      pattern="^[-+]?\$?\d{1,7}$"
+      [ngClass]="checkValid(noDeposit) ? 'input-validation' : ''"
+    />
+    <ng-container>
+      <div *ngIf="checkValid(noDeposit); else noDepositValidation">
+        {{
+          checkError(noDeposit, 'noDeposit start +|- and end from 0 to 1000000')
+        }}
+      </div>
+      <ng-template #noDepositValidation>
+        <p class="required">noDeposit start +|- and end from 0 to 1000000</p>
+      </ng-template>
+    </ng-container>
+  </main>
+  <div class="notify">
+    <p>{{ getNotify(bookieForm) }}</p>
+  </div>
+  <footer class="form__footer">
+    <button (click)="restore()">Restore</button>
+    <button
+      (click)="onSubmit()"
+      [disabled]="!bookieForm.valid"
+      [ngClass]="bookieForm.valid ? '' : 'no-submit'"
+    >
+      Submit
+    </button>
+    <button (click)="resetForm()">ResetForm</button>
+    <button [routerLink]="['../../casinos']">Cancel</button>
+  </footer>
+</form>

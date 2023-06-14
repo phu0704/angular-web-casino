@@ -1,0 +1,362 @@
+@import '../../shared/global';
+* {
+  transition: all 0.3s linear;
+}
+.hidden-content {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  * {
+    display: none;
+  }
+}
+.infor {
+  .container {
+    padding: 61px 54px 0 54px;
+    border-radius: 6px;
+    .infor__box {
+      display: flex;
+      gap: 24px;
+      background-color: white;
+      &--left {
+        padding: 19px 0 0 24px;
+        width: 728px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #111111;
+        height: 900px;
+        overflow: scroll;
+        #choose-img,
+        #criteria-img,
+        #writing-img,
+        #sort-img,
+        #find-img,
+        #filters-img,
+        #faq-img {
+          display: none;
+        }
+      }
+      &--right {
+        width: 260px;
+        //height: 192px;
+        height: fit-content;
+        margin: 16px 16px 0 0;
+        background: #f2f3f5;
+        border-radius: 6px;
+        position: sticky;
+        //position: -webkit-sticky;
+        top: 0;
+        .box__right--container {
+          padding: 15px 14px 17px 14px;
+          p {
+            cursor: pointer;
+            margin: 0 0 16px 0;
+            font-weight: 700;
+            font-size: 16px;
+            color: #111111;
+          }
+          .selected {
+            color: #1e60e1;
+            border-left: 3px solid #1e60e1;
+            padding-left: 14px;
+            margin-left: -14px;
+          }
+        }
+      }
+    }
+  }
+}
+.criteria {
+  margin-top: 24px;
+  padding: 13px 30px 13px 22px;
+  border-radius: 6px;
+}
+.sort {
+  .sort__content {
+    &--note {
+      background: #f2f3f5;
+      border-radius: 6px;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 18px 14px 11px 22px;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+.filters {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+  .filters__title {
+    padding: 24px 0;
+  }
+  p {
+    margin: 0;
+  }
+  .filters__content--checked {
+    padding-top: 24px;
+  }
+  .content__checked--item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .filters__content--table {
+    margin-top: 25px;
+    table,
+    td,
+    th {
+      border: 1px solid #eeeeee;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      // border-radius: 6px;
+    }
+    th {
+      background: #eeeeee;
+      border: 1px solid white;
+      border-right: 1px solid #eeeeee;
+    }
+    .th1 {
+      border-radius: 6px 0 0 0;
+    }
+    .th3 {
+      border-radius: 0 8px 0 0;
+      border-right: 1px solid white;
+    }
+  }
+}
+.faq {
+  margin-top: 40px;
+  padding-bottom: 62px;
+  &-container {
+    .faq__content {
+      padding-top: 24px;
+      p {
+        margin-bottom: 22px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .faq__table {
+      table {
+        border: 1px solid #f8f8f8;
+        background-color: #f8f8f8;
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 6px;
+        th {
+          display: flex;
+          justify-content: space-between;
+          padding: 13px 12px 13px 24px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        td {
+          background-color: white;
+          padding: 12px 41px 20px 24px;
+        }
+        tbody {
+          transition: all 0.3s linear;
+          height: 128px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $viewport-tablet) and (min-width: $viewport-m+1px) {
+  .infor {
+    .container {
+      padding: 20px 0 0 0;
+      position: relative;
+      .infor__box {
+        flex-direction: column-reverse;
+        &--left {
+          padding: 0 28px;
+          width: 100vw;
+          box-sizing: border-box;
+          section {
+            box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+            padding: 12px;
+            margin: 0;
+            .choose__title,
+            .criteria__title,
+            .writing__title,
+            .sort__title,
+            .find__title,
+            .filters__title,
+            .faq__title {
+              display: flex;
+              align-items: center;
+              //justify-content: center;
+              //gap: 0px;
+              padding: 0;
+              p {
+                margin: 0;
+              }
+            }
+          }
+          #choose-img,
+          #criteria-img,
+          #writing-img,
+          #sort-img,
+          #find-img,
+          #filters-img,
+          #faq-img {
+            display: none;
+          }
+        }
+        &--right {
+          //width: 258px;
+          //height: 192px;
+          //margin: 16px 16px 0 0;
+          //background: #f2f3f5;
+          //border-radius: 6px;
+          //position: sticky;
+          //position: -webkit-sticky;
+          //top: 0;
+          display: block;
+          width: 712px;
+          //margin: 34px auto;
+          margin: 0 auto;
+          margin-top: 34px;
+          //top: 34px;
+          //margin-bottom:34px;
+          position: relative;
+          //&-container {
+          //  padding: 15px 22px 17px 14px;
+          //  p {
+          //    margin: 0;
+          //    margin-bottom: 16px;
+          //    font-weight: 700;
+          //    font-size: 16px;
+          //    color: #111111;
+          //  }
+          //  .selected {
+          //    color: #1e60e1;
+          //    border-left: 3px solid #1e60e1;
+          //    padding-left: 14px;
+          //    margin-left: -14px;
+          //  }
+          //}
+        }
+      }
+    }
+  }
+}
+@media (max-width: $viewport-m) {
+  .p-size26 {
+    padding: 0;
+  }
+  .infor {
+    .container {
+      padding: 20px 0 0 0;
+      position: relative;
+      .infor__box {
+        &--left {
+          padding: 0;
+          height: auto !important;
+          overflow: auto;
+          width: 375px;
+          section {
+            box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+            padding: 12px;
+            margin: 0;
+            .choose__title,
+            .criteria__title,
+            .writing__title,
+            .sort__title,
+            .find__title,
+            .filters__title,
+            .faq__title {
+              display: flex;
+              align-items: center;
+              //background: red;
+              gap: 17px;
+              //justify-content: center;
+              //gap: 0px;
+              padding: 0;
+              p {
+                margin: 0;
+              }
+            }
+          }
+          #choose-img,
+          #criteria-img,
+          #writing-img,
+          #sort-img,
+          #find-img,
+          #filters-img,
+          #faq-img {
+            display: block;
+          }
+        }
+        &--right {
+          //width: 258px;
+          //height: 192px;
+          //margin: 16px 16px 0 0;
+          //background: #f2f3f5;
+          //border-radius: 6px;
+          //position: sticky;
+          //position: -webkit-sticky;
+          //top: 0;
+          display: none;
+          //&-container {
+          //  padding: 15px 22px 17px 14px;
+          //  p {
+          //    margin: 0;
+          //    margin-bottom: 16px;
+          //    font-weight: 700;
+          //    font-size: 16px;
+          //    color: #111111;
+          //  }
+          //  .selected {
+          //    color: #1e60e1;
+          //    border-left: 3px solid #1e60e1;
+          //    padding-left: 14px;
+          //    margin-left: -14px;
+          //  }
+          //}
+        }
+      }
+    }
+  }
+  .faq {
+    &-container {
+      .faq__table {
+        display: none;
+      }
+    }
+  }
+  .filters {
+    &__content--table {
+      td {
+        background-color: white;
+      }
+      table {
+      }
+      tr {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: auto 40px 100px !important;
+        td {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

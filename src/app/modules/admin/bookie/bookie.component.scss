@@ -1,0 +1,923 @@
+@import '../../shared/global';
+* {
+  transition: all 0.3s linear, hover 0s, transform 0.1s;
+}
+.bookie {
+  padding: 0 54px;
+  .container {
+    .bookie__container {
+      .bookie__box {
+        position: relative;
+        margin-top: 16px;
+        display: flex;
+        background-color: white;
+        border: 1px solid #e9ebee;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        .box__left {
+          padding: 24px;
+          background: #161735;
+          border: 1px solid #e9ebee;
+          border-radius: 6px 0 0 6px;
+        }
+        .box__right {
+          width: 100%;
+          //   background-color: green;
+          .box__right--header {
+            height: 64px;
+            width: 100%;
+            // background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            border: 1px solid #e9ebee;
+            border-radius: 0 0 6px 0;
+            // transform: matrix(1, 0, 0, -1, 0, 0);
+            .title {
+              display: flex;
+              gap: 5px;
+              padding-left: 24px;
+              p {
+                font-family: 'Oswald', serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 41px;
+                text-transform: uppercase;
+                color: #111111;
+                display: inline;
+              }
+              .title__australia {
+                display: none;
+              }
+              .title__stt {
+                color: #1e60e1;
+              }
+            }
+            .infor {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              gap: 15px;
+              padding-right: 25px;
+              .infor__featured,
+              .infor__ribbon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 106px;
+                height: 28px;
+                gap: 9.87px;
+                background: #f7bf31;
+                border-radius: 100px;
+                padding: 5px 12px;
+                box-sizing: border-box;
+                p {
+                  margin: 0;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 17px;
+                  color: white;
+                }
+              }
+              .infor__ribbon {
+                width: 108px;
+                background: #76c344;
+              }
+              .infor__perfect {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                font-family: 'Lato', serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                .title {
+                  padding: 0;
+                  color: #76c344;
+                }
+              }
+            }
+          }
+          .box__right--body {
+            .container {
+              .box__container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 32px;
+                color: #111111;
+                padding: 16px 24px 0 24px;
+                .box__title {
+                  .box__item {
+                    display: grid;
+                    //align-items: center;
+                    grid-template-columns: 16px 18px auto;
+                    align-items: center;
+                    gap: 15px;
+
+                    //.img-x{
+                    //  padding: 0 5px 0 5px;
+                    //}
+                    //.title__item--chat {
+                    //  padding: 0 5px 0 5px;
+                    //}
+                    p {
+                      margin: 0;
+                    }
+                  }
+                }
+                .box__infor {
+                  ul {
+                    margin: 0;
+                  }
+                  height: 128px;
+                }
+                .box__gift {
+                  position: relative;
+                  width: 164px;
+                  height: 149px;
+                  background: #fefafb;
+                  border: 5px solid #e8317e;
+                  box-shadow: 0 10px 12px rgba(232, 49, 126, 0.08);
+                  border-radius: 12px;
+                  box-sizing: border-box;
+                  padding: 32px 0 51px 0;
+                  .box__gift--circle {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    top: 12px;
+                    left: -20px;
+                    background: #e8317e;
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                  .box__gift--rectangle {
+                    position: absolute;
+                    top: 0;
+                    right: -5px;
+                    width: 80px;
+                    height: 26px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #ffffff;
+                    background: #e8317e;
+                    border-radius: 0 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                  .box__gift--content {
+                    width: 123px;
+                    height: 66px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-align: center;
+                    color: #e8317e;
+                    margin: 0 auto;
+                    .gift-content-hidden {
+                      display: none;
+                    }
+                  }
+                  .box__gift--tvc {
+                    //width: 75px;
+                    height: 17px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #1e60e1;
+                    margin: 0 auto;
+                    padding-top: 18px;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+          .box__right--footer {
+            padding: 3px 24px 24px 24px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+            button {
+              background: rgba(#1e60e1, 0.08);
+              border: 1px solid #e9ebee;
+              border-radius: 6px;
+              height: 44px;
+              display: flex;
+              align-items: center;
+              gap: 8.59px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 19px;
+              color: #1e60e1;
+              transition: all 0s;
+              P {
+                transition: all 0s;
+              }
+              &:hover {
+                color: white;
+                background-color: #1e60e1;
+              }
+            }
+            .reverse {
+              transform: rotate(180deg);
+            }
+            .visitCasino {
+              padding: 13px 56px 12px 55px;
+            }
+            .review {
+              padding: 13px 49px 12px 49px;
+            }
+            .moreDetails {
+              padding: 13px 17px 12px 17px;
+              //img {
+              //  transform: rotate(0);
+              //  transition: transform 0s;
+              //}
+            }
+            .moreDetails-show {
+              img {
+                transform: rotate(180deg);
+              }
+            }
+            .selected {
+              color: white;
+              background-color: #1e60e1;
+            }
+          }
+          .box__right--hidden {
+            height: 282px;
+            .container {
+              padding: 24px 85px 24px 24px;
+              display: flex;
+              justify-content: space-between;
+              border: 1px solid #e9ebee;
+              border-radius: 6px 6px 0px 0px;
+              .box__item {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #111111;
+                ul {
+                  padding-left: 20px;
+                }
+                img {
+                  width: 24px;
+                  height: 24px;
+                }
+                p {
+                  padding-left: 12px;
+                  display: inline;
+                }
+                li {
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $viewport-tablet) and (min-width: $viewport-m+1px) {
+  .bookie {
+    padding: 0 28px; ///
+    .container {
+      .bookie__container {
+        .bookie__box {
+          // position: relative;
+          // margin-top: 16px;
+          // display: flex;
+          // background-color: white;
+          // border: 1px solid #e9ebee;
+          // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          // border-radius: 6px;
+          width: 100%;
+          .box__left {
+            // padding: 24px;
+            // background: #161735;
+            // border: 1px solid #e9ebee;
+            // border-radius: 6px 0px 0px 6px;
+            // display: none;//
+            // position: absolute;
+            //width: 0;
+            //padding: 0;
+            //border: 0;
+            //img {
+            //  position: absolute;
+            //  top: 9px;
+            //  left: 12px;
+            //  width: 39px;
+            //  height: 39px;
+            //}
+          }
+          .box__right {
+            width: 521px;
+            .box__right--header {
+              //background-color: red;
+              width: 518px;
+              margin-top: 9px;
+              height: 114px;
+              // width: 100%;
+              // display: flex;
+              // align-items: center;
+              // justify-content: space-between;
+              // background-color: #ffffff;
+              // border: 1px solid #e9ebee;
+              // border-radius: 0px 0px 6px 0px;
+              flex-wrap: wrap;
+              border: 0;
+              .title {
+                display: flex;
+                //padding-left: 62px;
+                // background-color: red;
+                width: 230px;
+                flex-wrap: wrap;
+                p {
+                  // font-family: "Oswald";
+                  // font-style: normal;
+                  // font-weight: 700;
+                  font-weight: 700;
+                  font-size: 28px;
+                  line-height: 41px;
+                  text-transform: uppercase;
+                  // text-transform: uppercase;
+                  // color: #111111;
+                  margin: 0;
+                }
+                .title__australia {
+                  display: none;
+                }
+                .title__stt {
+                  color: #1e60e1;
+                }
+              }
+              .infor {
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-around;
+                // gap: 15px;
+                // padding-right: 25px;
+                // .featured,
+                // .ribbon {
+                //   // display: flex;
+                //   // align-items: center;
+                //   // justify-content: center;
+                //   // width: 106px;
+                //   // height: 28px;
+                //   // gap: 9.87px;
+                //   // background: #f7bf31;
+                //   // border-radius: 100px;
+                //   // padding: 5px 12px;
+                //   // box-sizing: border-box;
+                //   // p {
+                //   //   margin: 0;
+                //   //   font-style: normal;
+                //   //   font-weight: 600;
+                //   //   font-size: 14px;
+                //   //   line-height: 17px;
+                //   //   color: white;
+                //   // }
+                // }
+                padding: 0 0 0 16px;
+                width: 100vw;
+                justify-content: start;
+                gap: 7px;
+                .infor__featured {
+                  //position: absolute;
+                  //top: 19px;
+                  //right: 13.88px;
+                  //background-color: white;
+                  //border-radius: 0;
+                  //width: 14px;
+                  //height: 18px;
+                  //padding: 0;
+                  //background-image: url("/img/bookie/star-y-w.png");
+                  //img {
+                  //  display: none;
+                  //}
+                  //p {
+                  //  display: none;
+                  //}
+                  display: none;
+                }
+                // .ribbon {
+                //   width: 100px;
+                //   background: #76c344;
+                // }
+                .infor__perfect {
+                  // background-color: red;
+                  // display: flex;
+                  // align-items: center;
+                  // gap: 3px;
+                  // font-family: "Lato";
+                  // font-style: normal;
+                  // font-weight: 700;
+                  // font-size: 14px;
+                  // line-height: 17px;
+                  width: 135px;
+                  // .title {
+                  //   padding: 0;
+                  //   color: #76c344;
+                  // }
+                }
+              }
+            }
+            .box__right--body {
+              .container {
+                .box__container {
+                  // display: flex;
+                  // align-items: center;
+                  // justify-content: space-between;
+                  // font-style: normal;
+                  // font-weight: 400;
+                  // font-size: 16px;
+                  // line-height: 32px;
+                  // color: #111111;
+                  // padding: 16px 24px 0 24px;
+                  flex-wrap: wrap;
+                  // .box-title {
+                  //   .item {
+                  //     display: flex;
+                  //     align-items: center;
+
+                  //     gap: 15px;
+                  //     .img-chat {
+                  //       padding: 0 5px 0 5px;
+                  //     }
+                  //     p {
+                  //       margin: 0;
+                  //     }
+                  //   }
+                  // }
+                  .box__infor {
+                    display: none;
+                    // ul {
+                    //   margin: 0;
+                    // }
+                    // height: 128px;
+                  }
+                  .box__gift {
+                    // position: relative;
+                    // width: 164px;
+                    // height: 149px;
+                    // background: #fefafb;
+                    // border: 5px solid #e8317e;
+                    // box-shadow: 0px 10px 12px rgba(232, 49, 126, 0.08);
+                    // border-radius: 12px;
+                    // box-sizing: border-box;
+                    // padding: 32px 20px 51px 21px;
+                    //width: 327px;
+                    //height: 93px;
+                    //border: 2px solid #e8317e;
+                    //margin-left: -12px;
+                    .box__gift--circle {
+                      // position: absolute;
+                      // width: 40px;
+                      // height: 40px;
+                      // top: 12px;
+                      // left: -20px;
+                      // background: #e8317e;
+                      // border-radius: 100px;
+                      // display: flex;
+                      // align-items: center;
+                      // justify-content: center;
+                      //display: none;
+                    }
+                    .box__gift--rectangle {
+                      // position: absolute;
+                      // top: 0;
+                      // right: -5px;
+                      // width: 80px;
+                      // height: 26px;
+                      // font-weight: 400;
+                      // font-size: 14px;
+                      // line-height: 17px;
+                      // color: #ffffff;
+                      // background: #e8317e;
+                      // border-radius: 0px 12px;
+                      // display: flex;
+                      // align-items: center;
+                      // justify-content: center;
+                      //top: -2px;
+                      //left: -4px;
+                      //border-radius: 12px 0px;
+                    }
+                    .box__gift--content {
+                      // width: 123px;
+                      // height: 66px;
+                      // font-weight: 700;
+                      // font-size: 18px;
+                      // line-height: 22px;
+                      // text-align: center;
+                      // color: #e8317e;
+                      width: 123px;
+                      height: 66px;
+                    }
+                    .box__gift--tvc {
+                      // width: 75px;
+                      // height: 17px;
+                      // font-weight: 400;
+                      // font-size: 14px;
+                      // line-height: 17px;
+                      // color: #1e60e1;
+                      // margin: 0 auto;
+                      // padding-top: 18px;
+                      //position: absolute;
+                      //top: 5px;
+                      //right: 38px;
+                      //padding: 0;
+                      //margin: 0;
+                    }
+                  }
+                }
+              }
+            }
+            .box__right--footer {
+              //padding: 17px 24px 24px 24px;
+              //display: flex;
+              //justify-content: start;
+              //gap: 12px;
+              padding: 17px 20px 17px 20px;
+              justify-content: space-between;
+              // button {
+              //   background: rgba(#1e60e1, 0.08);
+              //   border: 1px solid #e9ebee;
+              //   border-radius: 6px;
+              //   height: 44px;
+              //   display: flex;
+              //   align-items: center;
+              //   gap: 8.59px;
+              //   font-style: normal;
+              //   font-weight: 700;
+              //   font-size: 16px;
+              //   line-height: 19px;
+              //   color: #1e60e1;
+              // }
+              .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+              }
+              .visitCasino {
+                // padding: 13px 56px 12px 55px;
+                //padding: 10px 31px 11px 30px;
+                //width: 94px;
+                //height: 40px;
+                //p{
+                //  display: none;
+                //}
+                display: flex;
+                justify-content: center;
+                width: 169px;
+              }
+              .review {
+                // padding: 13px 49px 12px 49px;
+                //padding: 10px 23px 11px 20px;
+                //width: 95px;
+                //height: 40px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                width: 105px;
+              }
+              .moreDetails {
+                // padding: 13px 17px 12px 17px;
+                //p {
+                //  width: 39px;
+                //  height: 19px;
+                //  overflow: hidden;
+                //}
+                //padding: 10px 0 11px 26px;
+                //width: 112px;
+                //height: 40px;
+                // img {
+                //   transform: rotate(180deg);
+                // }
+              }
+              // .moreDetails-show {
+              //   img {
+              //     transform: rotate(0deg);
+              //   }
+              // }
+              // .selected {
+              //   color: white;
+              //   background-color: #1e60e1;
+              // }
+            }
+            .box__right--hidden {
+              height: 463px;
+              .container {
+                // padding: 24px 85px 24px 24px;
+                // display: flex;
+                // justify-content: space-between;
+                // border: 1px solid #e9ebee;
+                // border-radius: 6px 6px 0px 0px;
+                flex-wrap: wrap;
+                padding: 20px 15px 20px 32px;
+                // .item {
+                //   font-style: normal;
+                //   font-weight: 700;
+                //   font-size: 18px;
+                //   line-height: 22px;
+                //   color: #111111;
+                //   img {
+                //     width: 24px;
+                //     height: 24px;
+                //   }
+                p {
+                  margin: 0;
+                }
+                ul {
+                  padding: 0 0 0 15px;
+                  margin: 12px 0;
+                }
+                li {
+                  //font-weight: 400;
+                  //font-size: 16px;
+                  line-height: 0px;
+                }
+                // }
+              }
+            }
+          }
+        }
+        .bookie__unibet,
+        .bookie__dafabet,
+        .bookie__happi {
+          .box__left {
+            img {
+              border-radius: 10px;
+            }
+          }
+          .box__right {
+            .box__right--body {
+              .container {
+                .box__container {
+                  .box__gift {
+                    border: 2px solid #f6bf31;
+                    .box__gift--circle {
+                      background-color: #f6bf31;
+                    }
+                    .box__gift--rectangle {
+                      background-color: #f6bf31;
+                    }
+                    .box__gift--content {
+                      color: #0c1245;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .bookie__happi {
+          .box__right {
+            .box__right--body {
+              .container {
+                .box__container {
+                  .box__gift {
+                    height: 191px;
+                    .box__gift--content {
+                      height: 110px;
+                    }
+                    //.box__gift--tvc{
+                    //  background-color: red;
+                    //}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $viewport-m) {
+  .bookie {
+    padding: 0 12px;
+    .container {
+      .bookie__container {
+        .bookie__box {
+          .box__left {
+            width: 0;
+            padding: 0;
+            border: 0;
+            img {
+              position: absolute;
+              top: 9px;
+              left: 12px;
+              width: 39px;
+              height: 39px;
+            }
+          }
+          .box__right {
+            .box__right--header {
+              margin-top: 9px;
+              height: 114px;
+              flex-wrap: wrap;
+              border: 0;
+              .title {
+                display: flex;
+                padding-left: 62px;
+                //background-color: red;
+                width: 230px;
+                flex-wrap: wrap;
+                height: 39px;
+                align-items: center;
+                p {
+                  // font-family: "Oswald";
+                  // font-style: normal;
+                  // font-weight: 700;
+                  font-size: 20px;
+                  line-height: 30px;
+                  // text-transform: uppercase;
+                  // color: #111111;
+                  margin: 0;
+                }
+                .title__australia {
+                  display: inline;
+                }
+                .title__stt {
+                  color: #1e60e1;
+                }
+              }
+              .infor {
+                padding: 0;
+                width: 100vw;
+                justify-content: flex-start;
+                gap: 7px;
+                .infor__featured {
+                  position: absolute;
+                  top: 19px;
+                  right: 13.88px;
+                  background-color: white;
+                  border-radius: 0;
+                  width: 14px;
+                  height: 18px;
+                  padding: 0;
+                  background-image: url('../../../../assets/img/bookie/rating-star-ribbon.png');
+                  img {
+                    display: none;
+                  }
+                  p {
+                    display: none;
+                  }
+                }
+                .infor__perfect {
+                  width: 135px;
+                }
+              }
+            }
+            .box__right--body {
+              .container {
+                .box__container {
+                  flex-wrap: wrap;
+                  .box__infor {
+                    display: none;
+                  }
+                  .box__gift {
+                    padding: 35px 33px 14px 19px;
+                    width: 327px;
+                    height: 93px;
+                    border: 2px solid #e8317e;
+                    margin-left: -12px;
+                    .box__gift--circle {
+                      display: none;
+                    }
+                    .box__gift--rectangle {
+                      top: -2px;
+                      left: -4px;
+                      border-radius: 12px 0;
+                    }
+                    .box__gift--content {
+                      width: 291px;
+                      height: 44px;
+                      .gift-content-hidden {
+                        display: inline;
+                      }
+                    }
+                    .box__gift--tvc {
+                      position: absolute;
+                      top: 5px;
+                      right: 38px;
+                      padding: 0;
+                      margin: 0;
+                    }
+                  }
+                }
+              }
+            }
+            .box__right--footer {
+              padding: 17px 12px 17px 12px;
+              .visitCasino {
+                padding: 10px 31px 11px 30px;
+                width: 94px;
+                height: 40px;
+                p {
+                  display: none;
+                }
+              }
+              .review {
+                padding: 10px 23px 11px 20px;
+                width: 95px;
+                height: 40px;
+              }
+              .moreDetails {
+                p {
+                  width: 39px;
+                  height: 19px;
+                  overflow: hidden;
+                }
+                padding: 10px 0 11px 26px;
+                width: 112px;
+                height: 40px;
+              }
+            }
+            .box__right--hidden {
+              height: 510px;
+              .container {
+                flex-wrap: wrap;
+                padding: 20px 15px 20px 15px;
+                p {
+                  margin: 0;
+                }
+                ul {
+                  padding: 0 0 0 15px;
+                  margin: 12px 0;
+                }
+                li {
+                  line-height: 0;
+                }
+              }
+            }
+          }
+        }
+        .bookie__unibet,
+        .bookie__dafabet,
+        .bookie__happi {
+          .box__left {
+            img {
+              border-radius: 10px;
+            }
+          }
+          .box__right {
+            .box__right--body {
+              .container {
+                .box__container {
+                  .box__gift {
+                    border: 2px solid #f6bf31;
+                    .box__gift--circle {
+                      background-color: #f6bf31;
+                    }
+                    .box__gift--rectangle {
+                      background-color: #f6bf31;
+                    }
+                    .box__gift--content {
+                      color: #0c1245;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .bookie__happi {
+          display: none;
+          .box__right {
+            .box__right--body {
+              .container {
+                .box__container {
+                  .box__gift {
+                    height: 93px;
+                    .box__gift--content {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

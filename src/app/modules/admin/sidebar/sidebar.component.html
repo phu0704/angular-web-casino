@@ -1,0 +1,32 @@
+<div [ngClass]="getSidebar() ? 'sidebar' : 'sidebar-show'" id="sidebar">
+  <div class="sidebar__logo">
+    <img src="../assets/img/sidebar/logo.png" alt="" />
+  </div>
+  <div class="sidebar__crossbar"></div>
+  <div class="sidebar__casinos" *ngFor="let i of optionList">
+    <div class="sidebar__select sidebar__casinos--select">
+      <img class="img-logo" src="{{ i.img }}" alt="" />
+      <p>{{ i.name }}</p>
+      <img
+        *ngIf="i.option.length > 1"
+        class="img-arrow"
+        (click)="hiddenOption($event)"
+        [ngStyle]="{ transform: i.status ? 'rotate(0deg)' : 'rotate(180deg)' }"
+        [name]="i.name"
+        src="../assets/img/sidebar/Vector.png"
+        alt=""
+      />
+    </div>
+    <div
+      [ngClass]="i.status ? 'intro__active--option' : 'hidden-option'"
+      id="option-casinos"
+    >
+      <p *ngFor="let option of i.option">{{ option }}</p>
+    </div>
+  </div>
+</div>
+<div
+  [ngClass]="getSidebar() ? 'coating' : 'coating hidden'"
+  id="sidebar-coating"
+  (click)="openSlideBar()"
+></div>

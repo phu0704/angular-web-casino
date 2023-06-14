@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div
+    class="wrapper__sidebar"
+    id="wrapper__sidebar"
+    [ngStyle]="{ height: getSidebarStatus() ? '' : '0' }"
+  >
+    <app-sidebar></app-sidebar>
+  </div>
+  <div
+    class="wrapper__container"
+    [ngClass]="getSidebarStatus() ? 'container' : 'container margin'"
+  >
+    <!--    <button routerLink="/casinos">open Casinos</button>-->
+    <app-header></app-header>
+    <main>
+      <app-intro></app-intro>
+      <router-outlet></router-outlet>
+      <app-infor></app-infor>
+    </main>
+    <app-footer></app-footer>
+  </div>
+</div>

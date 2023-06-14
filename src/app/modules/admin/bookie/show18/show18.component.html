@@ -1,0 +1,44 @@
+<section class="show18">
+  <div class="container">
+    <div class="show18__container">
+      <div class="show18__btn" (click)="show18More()">
+        <button>Show 18 more</button>
+      </div>
+      <div class="show18__container--pagination">
+        <div class="pagination-container">
+          <pagination-controls
+            (pageChange)="setP($event)"
+            previousLabel="<"
+            nextLabel=">"
+          >
+          </pagination-controls>
+        </div>
+        <div class="showResults">
+          Showing results {{ getBookieStart() }} - {{ getBookieEnd() }} of
+          {{ getLengthBookieList() }}
+        </div>
+        <div class="pagination-hidden">
+          <div class="pagination-hidden__container">
+            <button
+              class="pagination__pervious"
+              (click)="previour()"
+              [ngClass]="unHoverPre ? 'un-hover' : ''"
+            >
+              <img src="../assets/img/show/previous.png" alt="" />
+              <p>Previous</p>
+            </button>
+
+            <button
+              class="pagination__next btn-selected"
+              (click)="next()"
+              [ngClass]="unHoverNext ? 'un-hover' : ''"
+            >
+              <p>Next</p>
+              <img src="../assets/img/show/next.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

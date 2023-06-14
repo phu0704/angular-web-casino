@@ -1,0 +1,578 @@
+* {
+  transition: all 0.3s linear, hover 0s, transform 0.1s;
+}
+
+.bookie {
+  padding: 0 54px;
+}
+.bookie .container .bookie__container .bookie__box {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  background-color: white;
+  border: 1px solid #e9ebee;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+.bookie .container .bookie__container .bookie__box .box__left {
+  padding: 24px;
+  background: #161735;
+  border: 1px solid #e9ebee;
+  border-radius: 6px 0 0 6px;
+}
+.bookie .container .bookie__container .bookie__box .box__right {
+  width: 100%;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e9ebee;
+  border-radius: 0 0 6px 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title {
+  display: flex;
+  gap: 5px;
+  padding-left: 24px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title p {
+  font-family: "Oswald", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 41px;
+  text-transform: uppercase;
+  color: #111111;
+  display: inline;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__australia {
+  display: none;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__stt {
+  color: #1e60e1;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  padding-right: 25px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured,
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 28px;
+  gap: 9.87px;
+  background: #f7bf31;
+  border-radius: 100px;
+  padding: 5px 12px;
+  box-sizing: border-box;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured p,
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__ribbon p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__ribbon {
+  width: 108px;
+  background: #76c344;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: "Lato", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect .title {
+  padding: 0;
+  color: #76c344;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #111111;
+  padding: 16px 24px 0 24px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__title .box__item {
+  display: grid;
+  grid-template-columns: 16px 18px auto;
+  align-items: center;
+  gap: 15px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__title .box__item p {
+  margin: 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor {
+  height: 128px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor ul {
+  margin: 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift {
+  position: relative;
+  width: 164px;
+  height: 149px;
+  background: #fefafb;
+  border: 5px solid #e8317e;
+  box-shadow: 0 10px 12px rgba(232, 49, 126, 0.08);
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 32px 0 51px 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 12px;
+  left: -20px;
+  background: #e8317e;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 80px;
+  height: 26px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background: #e8317e;
+  border-radius: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+  width: 123px;
+  height: 66px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #e8317e;
+  margin: 0 auto;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content .gift-content-hidden {
+  display: none;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--tvc {
+  height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1e60e1;
+  margin: 0 auto;
+  padding-top: 18px;
+  text-align: center;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer {
+  padding: 3px 24px 24px 24px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer button {
+  background: rgba(30, 96, 225, 0.08);
+  border: 1px solid #e9ebee;
+  border-radius: 6px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8.59px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e60e1;
+  transition: all 0s;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer button P {
+  transition: all 0s;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer button:hover {
+  color: white;
+  background-color: #1e60e1;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .reverse {
+  transform: rotate(180deg);
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino {
+  padding: 13px 56px 12px 55px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .review {
+  padding: 13px 49px 12px 49px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails {
+  padding: 13px 17px 12px 17px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails-show img {
+  transform: rotate(180deg);
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .selected {
+  color: white;
+  background-color: #1e60e1;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden {
+  height: 282px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container {
+  padding: 24px 85px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e9ebee;
+  border-radius: 6px 6px 0px 0px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #111111;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item ul {
+  padding-left: 20px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item img {
+  width: 24px;
+  height: 24px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item p {
+  padding-left: 12px;
+  display: inline;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@media (max-width: 769px) and (min-width: 377px) {
+  .bookie {
+    padding: 0 28px;
+  }
+  .bookie .container .bookie__container .bookie__box {
+    width: 100%;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right {
+    width: 521px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header {
+    width: 518px;
+    margin-top: 9px;
+    height: 114px;
+    flex-wrap: wrap;
+    border: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title {
+    display: flex;
+    width: 230px;
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title p {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 41px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__australia {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__stt {
+    color: #1e60e1;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor {
+    padding: 0 0 0 16px;
+    width: 100vw;
+    justify-content: start;
+    gap: 7px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect {
+    width: 135px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container {
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    width: 123px;
+    height: 66px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer {
+    padding: 17px 20px 17px 20px;
+    justify-content: space-between;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino {
+    display: flex;
+    justify-content: center;
+    width: 169px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .review {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 105px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden {
+    height: 463px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container {
+    flex-wrap: wrap;
+    padding: 20px 15px 20px 32px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container p {
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container ul {
+    padding: 0 0 0 15px;
+    margin: 12px 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container li {
+    line-height: 0px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__left img,
+  .bookie .container .bookie__container .bookie__dafabet .box__left img,
+  .bookie .container .bookie__container .bookie__happi .box__left img {
+    border-radius: 10px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    border: 2px solid #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    color: #0c1245;
+  }
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    height: 191px;
+  }
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    height: 110px;
+  }
+}
+@media (max-width: 376px) {
+  .bookie {
+    padding: 0 12px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__left {
+    width: 0;
+    padding: 0;
+    border: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__left img {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    width: 39px;
+    height: 39px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header {
+    margin-top: 9px;
+    height: 114px;
+    flex-wrap: wrap;
+    border: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title {
+    display: flex;
+    padding-left: 62px;
+    width: 230px;
+    flex-wrap: wrap;
+    height: 39px;
+    align-items: center;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title p {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__australia {
+    display: inline;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__stt {
+    color: #1e60e1;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor {
+    padding: 0;
+    width: 100vw;
+    justify-content: flex-start;
+    gap: 7px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured {
+    position: absolute;
+    top: 19px;
+    right: 13.88px;
+    background-color: white;
+    border-radius: 0;
+    width: 14px;
+    height: 18px;
+    padding: 0;
+    background-image: url("../../../../assets/img/bookie/rating-star-ribbon.png");
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured img {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured p {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect {
+    width: 135px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container {
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift {
+    padding: 35px 33px 14px 19px;
+    width: 327px;
+    height: 93px;
+    border: 2px solid #e8317e;
+    margin-left: -12px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+    top: -2px;
+    left: -4px;
+    border-radius: 12px 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    width: 291px;
+    height: 44px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content .gift-content-hidden {
+    display: inline;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--tvc {
+    position: absolute;
+    top: 5px;
+    right: 38px;
+    padding: 0;
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer {
+    padding: 17px 12px 17px 12px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino {
+    padding: 10px 31px 11px 30px;
+    width: 94px;
+    height: 40px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino p {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .review {
+    padding: 10px 23px 11px 20px;
+    width: 95px;
+    height: 40px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails {
+    padding: 10px 0 11px 26px;
+    width: 112px;
+    height: 40px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails p {
+    width: 39px;
+    height: 19px;
+    overflow: hidden;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden {
+    height: 510px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container {
+    flex-wrap: wrap;
+    padding: 20px 15px 20px 15px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container p {
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container ul {
+    padding: 0 0 0 15px;
+    margin: 12px 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container li {
+    line-height: 0;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__left img,
+  .bookie .container .bookie__container .bookie__dafabet .box__left img,
+  .bookie .container .bookie__container .bookie__happi .box__left img {
+    border-radius: 10px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    border: 2px solid #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    color: #0c1245;
+  }
+  .bookie .container .bookie__container .bookie__happi {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    height: 93px;
+  }
+}
+
+/*# sourceMappingURL=bookie.component.css.map */

@@ -1,0 +1,188 @@
+.form__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__header h1 {
+  color: #1e60e1;
+}
+.form__header button {
+  width: 155px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid #1e60e1;
+  color: #1e60e1;
+  background-color: white;
+}
+.form__header button:hover {
+  background-color: #1e60e1;
+  color: white;
+}
+
+.form__main {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 54px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 15px;
+  font-size: 15px;
+  color: red;
+}
+.form__main label {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+.form__main input {
+  color: black;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+.form__main input:hover {
+  border: 2px solid #1e60e1;
+  box-sizing: content-box;
+}
+.form__main .form__main--id {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.form__main .input-validation {
+  border: 2px solid red;
+}
+.form__main .required {
+  color: #999999;
+  margin: 0;
+  padding: 0;
+}
+
+.notify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.form__footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.form__footer button {
+  width: 155px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid #1e60e1;
+  color: #1e60e1;
+  background-color: white;
+}
+.form__footer button:hover {
+  background-color: #1e60e1;
+  color: white;
+}
+.form__footer .no-submit {
+  border: 1px solid red;
+  color: red;
+}
+.form__footer .no-submit:hover {
+  background-color: white;
+  color: red;
+}
+
+@media (max-width: 769px) and (min-width: 377px) {
+  .form__main {
+    width: 100vw;
+    padding: 12px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    font-size: 12px;
+  }
+  .form__main label {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .form__main input {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 6px;
+  }
+  .form__main input:hover {
+    border: 2px solid #1e60e1;
+    box-sizing: content-box;
+  }
+  .form__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .form__footer button {
+    width: 90px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1px solid #1e60e1;
+    color: #1e60e1;
+    background-color: white;
+  }
+}
+@media (max-width: 376px) {
+  .form__main {
+    width: 100vw;
+    padding: 12px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    font-size: 12px;
+  }
+  .form__main label {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .form__main input {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 6px;
+  }
+  .form__main input:hover {
+    border: 2px solid #1e60e1;
+    box-sizing: content-box;
+  }
+  .form__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .form__footer button {
+    width: 90px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1px solid #1e60e1;
+    color: #1e60e1;
+    background-color: white;
+  }
+}
+
+/*# sourceMappingURL=bookie-form.component.css.map */

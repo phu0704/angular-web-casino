@@ -1,0 +1,47 @@
+<div class="login">
+  <div class="login__container">
+    <h1>Login</h1>
+    <form [formGroup]="bookieForm" (ngSubmit)="onSubmit()">
+      <main class="form__main">
+        <div class="row-control">
+          <p></p>
+          <p class="check">VD: Admin12345</p>
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" formControlName="username" />
+          </mat-form-field>
+          <div class="error">
+            {{ checkValid('username') }}
+          </div>
+        </div>
+        <div class="row-control">
+          <p></p>
+          <p>VD: Admin12345@</p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+          </mat-form-field>
+          <div class="error">
+            {{ checkValid('password') }}
+          </div>
+        </div>
+      </main>
+      <div class="notify"></div>
+      <div class="row-control row-actions">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!bookieForm.valid"
+        >
+          Login Now
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
